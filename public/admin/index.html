@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="sidebar">
+        <div id="sidebar__logo">CinePro</div>
+        <ul>
+          <li><a href="#">All Movies</a></li>
+          <li class="active"><a href="#">Add new movie</a></li>
+          <li><a href="#">Update Movie</a></li>
+          <li><a href="#">Delete Movie</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <div class="add-movie-form">
+          <div class="heading">
+            <h1>Add New Movie</h1>
+            <p>
+              Please copy and paste IMDB link here to get all details or put
+              details manually
+            </p>
+            <input
+              type="text"
+              id="imdb_link"
+              placeholder="Please Paste IMDB Link Here"
+              value="https://www.imdb.com/title/tt4154796/"
+            />
+            <button id="get_info_imdb">Get Info</button>
+          </div>
+          <form action="" id="add" class="add-new-movie-form">
+            <p>Basic information about movie</p>
+            <div class="devider-small"></div>
+
+            <!-- form elements -->
+            <div class="single__element">
+              <div class="element__title">
+                <label for="movieName">Movie Name: </label>
+              </div>
+              <div class="element">
+                <input type="text" name="movieName" id="movie_Name" />
+                <br>
+                <img src="" alt="" id="movie_poster_tmp" style="width: 20%; margin-top: 10px;transition: all .5s;">
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="genre">Select Genre: </label>
+              </div>
+              <div class="element grid-elements">
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Action"
+                  />
+                  Action
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Adventure"
+                  />
+                  Adventure
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Animation"
+                  />
+                  Animation
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Biography"
+                  />
+                  Biography
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Comedy"
+                  />
+                  Comedy
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Crime"
+                  />
+                  Crime
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Documentary"
+                  />
+                  Documentary
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Drama"
+                  />
+                  Drama
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Family"
+                  />
+                  Family
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Fantasy"
+                  />
+                  Fantasy
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Film Noir"
+                  />
+                  Film Noir
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="History"
+                  />
+                  History
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Horror"
+                  />
+                  Horror
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Music"
+                  />
+                  Music
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Musical"
+                  />
+                  Musical
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Mystery"
+                  />
+                  Mystery
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Romance"
+                  />
+                  Romance
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Sci-Fi"
+                  />
+                  Sci-Fi
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Short Film"
+                  />
+                  Short Film
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Sport"
+                  />
+                  Sport
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Superhero"
+                  />
+                  Superhero
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Thriller"
+                  />
+                  Thriller
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="War"
+                  />
+                  War
+                </div>
+                <div class="element__flex_single_element">
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    class="genre"
+                    value="Western"
+                  />
+                  Western
+                </div>
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="category">Select category: </label>
+              </div>
+              <div class="element">
+                <select name="category" id="movie_category" form="">
+                  <option value="Hollywood">Hollywood</option>
+                  <option value="Bollywood">Bollywood</option>
+                </select>
+              </div>
+            </div>
+            <div class="single__element">
+              <div class="element__title">
+                <label for="releaseYear">Select Release Year: </label>
+              </div>
+              <div class="element">
+                <input type="text" name="releaseYear" id="release_year" />
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="rating">IMDB Rating:</label>
+              </div>
+              <div class="element">
+                <input type="text" name="rating" id="imdb_rating" />
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="quantity">IMDB Rating Quantity:</label>
+              </div>
+              <div class="element">
+                <input type="number" name="quantity" id="rating_qty" />
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="duration">Movie Duration in min: </label>
+              </div>
+              <div class="element">
+                <input type="number" name="duration" id="movie_duration" />
+              </div>
+            </div>
+
+            <div class="single__element">
+                <div class="element__title">
+                  <label for="moviePlot">Movie Storyline: </label>
+                </div>
+                <div class="element">
+                  <input type="text" name="moviePlot" id="movie_plot" />
+                </div>
+              </div>
+
+            <!-- divider -->
+            <p>Information about video file</p>
+            <div class="devider-small"></div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="quality">Select Quality:</label>
+              </div>
+              <div class="element">
+                <select name="quality" id="quality" form="">
+                  <option value="Bluray">Bluray</option>
+                  <option value="DVDRip">DVDRip</option>
+                  <option value="WebRip">WebRip</option>
+                  <option value="HDRip">HDRip</option>
+                  <option value="BRRip">BRRip</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="resolution">resolutions</label>
+              </div>
+              <div class="element">
+                <input type="checkbox" name="resolution" data-res="0" class="res_checkbox" value="720" onclick="enableTextBox(this)"/>720p
+                <input type="checkbox" name="resolution" data-res="1" class="res_checkbox" value="1080" onclick="enableTextBox(this)"/>1080p
+                <input type="checkbox" name="resolution" data-res="2" class="res_checkbox" value="4k" onclick="enableTextBox(this)"/>4k
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="size">Size:</label>
+              </div>
+              <div class="element">
+                <div class="multi-lbl-input">
+                  <label for="size">720p</label>
+                  <input type="text" name="size" id="" class="res_size" disabled/>
+                  <br />
+                  <label for="size">1080p</label>
+                  <input type="text" name="size" id="" class="res_size" disabled/>
+                  <br />
+                  <label for="size">4k</label>
+                  <input type="text" name="size" id="" class="res_size" disabled/>
+                </div>
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="format">Format: </label>
+              </div>
+              <div class="element">
+                <select name="format" id="video_format">
+                  <option value="mkv">mkv</option>
+                  <option value="mp4">mp4</option>
+                  <option value="avi">avi</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="fps">Select FPS: </label>
+              </div>
+              <div class="element">
+                <select name="fps" id="video_fps" form="">
+                    <option value="N/A">N/A</option>
+                    <option value="24">24</option>
+                    <option value="30">30</option>
+                    <option value="60">60</option>
+                  </select>
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="codec">Select Codec: </label>
+              </div>
+              <div class="element">
+                <input type="text" name="codec" id="video_codec" />
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="audio">Select Audio Language: </label>
+              </div>
+              <div class="element">
+                <input type="checkbox" name="audio" value="English"/>English
+                <input type="checkbox" name="audio" value="Hindi"/>Hindi
+                <input
+                  type="text"
+                  name="audio"
+                  placeholder="specify other Language..."
+                />
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="audio">Select Subtitles: </label>
+              </div>
+              <div class="element">
+                <input type="checkbox" name="subs" value="English"/>English
+                <input type="checkbox" name="subs" value="Hindi"/>Hindi
+                <input
+                  type="text"
+                  name="audio"
+                  placeholder="specify other Language..."
+                />
+              </div>
+            </div>
+
+            <!-- divider -->
+            <p>Poster and Screenshots</p>
+            <div class="devider-small"></div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="poster">Select Poster Image: </label>
+              </div>
+              <div class="element">
+                <input type="file" name="poster" id="poster_img" />
+                <br />
+                OR 
+                <br> Provide link
+                <input type="text" name="poster" id="poster_img_link" />
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="screenshot">Select screenshot Images: </label>
+              </div>
+              <div class="element">
+                <input type="file" name="screenshot" id="" />
+                <input type="file" name="screenshot" id="" />
+                <input type="file" name="screenshot" id="" />
+              </div>
+            </div>
+
+            <!-- divider -->
+            <p>Links</p>
+            <div class="devider-small"></div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="">Please Provide Online Link:</label>
+              </div>
+              <div class="element">
+                <div class="multi-lbl-input">
+                <label for="onlineLinks">720p</label>
+                <input type="text" name="onlineLinks" id="" class="online_link" disabled/>
+                <br />
+                <label for="onlineLinks">1080p</label>
+                <input type="text" name="onlineLinks" id="" class="online_link" disabled/>
+                <br />
+                <label for="onlineLinks">4k</label>
+                <input type="text" name="onlineLinks" id="" class="online_link" disabled/>
+                </div>
+              </div>
+            </div>
+
+            <div class="single__element">
+              <div class="element__title">
+                <label for="downloadlinks">Please Provide Download Link:</label>
+              </div>
+              <div class="element">
+                <div class="multi-lbl-input">
+                <label for="downloadlinks">720p</label>
+                <input type="text" name="downloadlinks" id="" class="download_link" disabled/>
+                <br />
+                <label for="downloadlinks">1080p</label>
+                <input type="text" name="downloadlinks" id="" class="download_link" disabled/>
+                <br />
+                <label for="downloadlinks">4k</label>
+                <input type="text" name="downloadlinks" id="" class="download_link" disabled/>
+                </div>
+                <br />
+              </div>
+            </div>
+            <input type="submit" name="submit" id="" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/admin.js"></script>
+  </body>
+</html>

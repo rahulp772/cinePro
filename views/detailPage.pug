@@ -1,0 +1,224 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet', integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN', crossorigin='anonymous')
+    link(rel='stylesheet', href='./css/main.css')
+    title=`CinePro | ${movie.movieName}` 
+  body
+    // ----------------header---------------------
+    header#home.flex-row
+      #logo CinePro
+      nav#nav-menu
+        ul
+          li
+            a(href='index.html') Home
+          li Categories
+          li Contact us
+          li Log In
+          input#searchBox.searchBox-hidden(type='text', placeholder='Search by movie name')
+          button#searchBtn
+            i.fa.fa-search
+    // ---------------slider---------------------
+    #detail-cover.flex-row
+      .cover(style=`\
+      background-image: url(${movie.poster});\
+      `)
+      .detail-cover-left.flex-row
+        .detail-cover-left-img
+          img(src=`${movie.poster}`, alt='')
+      .detail-cover-right.flex-row
+        .detail-cover-right-container
+          .detail-cover-right-title
+            =`${movie.movieName}`
+          .detail-cover-right-alldetails
+            div
+              span Genres: 
+              each genre in movie.genre
+                =`${genre} | `
+            div
+              span IMDB Rating: 
+              =`${movie.rating}`
+            div
+              span Duration: 
+              =`${movie.duration} min`
+            div
+              span Quality: 
+              =`${movie.quality}`
+            div
+              span Resolutions: 
+              each res in movie.resolution
+                =`${res} | `
+            div
+              span File Format: 
+              =`${movie.format}`
+            div
+              span Language: 
+              each lang in movie.audioFormat
+                =`${lang} | `
+            div
+              span Subtitles: 
+              each sub in movie.subtitles
+                =`${sub} | `
+          .detail-cover-right-buttons
+            span + Trailer
+            span + Wishlist
+            span + Favourite
+            span + Share
+    // details
+    #details-container
+      // Storyline summary
+      section
+        .story-heading
+          | StoryLine
+        .details-container-storyline
+          p
+            =`${movie.plot}`
+      // screenshot section
+      section
+        .screenshots-heading
+          | Screenshots
+        #details-container-screenshots
+          .screenshots-container.flex-row
+            .screenshots-img-container
+              img(src='./images/Screenshots/vlcsnap-2020-03-05-22h54m36s822.png', alt='')
+            .screenshots-img-container
+              img(src='./images/Screenshots/vlcsnap-2020-03-05-22h57m21s600.png', alt='')
+            .screenshots-img-container
+              img(src='./images/Screenshots/vlcsnap-2020-03-05-22h59m16s800.png', alt='')
+            //
+              <div class="screenshots-img-container">
+              <img src="./images/Screenshots/vlcsnap-2020-03-05-23h03m02s379.png" alt="">
+              </div>
+      //- // download section
+      section
+        .downloads-heading
+          | Download Links
+        #details-container-downloads.flex-row
+          span.quality-container
+            .download-quality.selected 720p
+            .download-quality 1080p
+            .download-quality 4K
+          span.quality-details-container
+            .quality-details-all
+              div
+                span Resolutions: 
+                | 1280×720 px
+              div
+                span FPS: 
+                | 23.94
+              div
+                span Size: 
+                | 1.2 GB
+              div
+                span File Format: 
+                | mkv
+              div
+                span Aspect Ratio: 
+                | 16:9
+              div
+                span Codec: 
+                | H264
+              div
+                span Audio: 
+                | English (DD-2.0 CH) | Hindi (DD-2.0 CH)
+              div
+                span Subtitles: 
+                | English | Hindi
+              .download-btn
+                a(href='#') Direct Download
+              .download-btn
+                a(href='#') Download Torrent
+            .quality-details-all.hidden
+              div
+                span Resolutions: 
+                | 1920 x 1080 px
+              div
+                span FPS: 
+                | 23.94
+              div
+                span Size: 
+                | 3.6 GB
+              div
+                span File Format: 
+                | mkv
+              div
+                span Aspect Ratio: 
+                | 16:9
+              div
+                span Codec: 
+                | H264
+              div
+                span Audio: 
+                | English (DD-6.0 CH) | Hindi (DD-5.1 CH)
+              div
+                span Subtitles: 
+                | English | Hindi
+              .download-btn
+                a(href='#') Direct Download
+              .download-btn
+                a(href='#') Download Torrent
+            .quality-details-all.hidden
+              div
+                span Resolutions: 
+                | 4096 × 2160 px
+              div
+                span FPS: 
+                | 23.94
+              div
+                span Size: 
+                | 9.8 GB
+              div
+                span File Format: 
+                | mkv
+              div
+                span Aspect Ratio: 
+                | 16:9
+              div
+                span Codec: 
+                | H264
+              div
+                span Audio: 
+                | English (DD-6.0 CH) | Hindi (DD-5.1 CH)
+              div
+                span Subtitles: 
+                | English | Hindi
+              .download-btn
+                a(href='#') Direct Download
+              .download-btn
+                a(href='#') Download Torrent
+      section
+    // Footer
+    footer#footer.flex-row.full-width
+      .footer-logo cinepro.com
+      .footer-query Any Query? write us at cinepro@ex.com
+      .footer-copyright
+        | Copyright © 2020 CinePro | All Rights Reserved
+    script(src='./js/jQuery-v3.5.1.js')
+    script.
+      $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $("html, body").animate(
+      {
+      scrollTop: $(hash).offset().top,
+      },
+      800,
+      function () {
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      }
+      );
+      } // End if
+      });
+      });
+    script(src='./js/detailPage.js')

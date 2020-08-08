@@ -1,0 +1,25 @@
+
+------------------------------------*PENDING*-------------------------------
+// global handler function
+
+
+
+
+
+--------------------------------------*DONE*----------------------------------
+// Create Server
+// Create App.js
+// Create Movie Model
+// Create Movie controller
+// Create movieRoutes
+// Mount Api path in app.js
+// Create user Model
+// Create user controller
+// create user userRoutes
+// Mount Api path in app.js
+// CRUD user
+// Password validation & encryption when creating user
+// JWT
+// Signup
+// login
+// CRUD Movie

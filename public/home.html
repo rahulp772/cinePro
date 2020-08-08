@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@700&family=Noto+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>CinePro | Download and watch latest movies</title>
+  </head>
+  <body>
+    <!-- ------------------LogIn Screen------------ -->
+    <div class="blurbg hidden">
+      <div id="logInPopupScreen" class="logInPopupScreen hidden">
+        <div id="close_btn">
+          <div class="ham"></div>
+        </div>
+        <div class="logo">CinePro</div>
+        <div class="tagline">Download latest movies and web series</div>
+
+        <!-- Log In Form -->
+        <form action="" id="logInForm">
+          <div class="formInputBlock"><span class="heading">Log In</span></div>
+          <div class="formInputBlock">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" name="loginEmail" id="login_email" />
+          </div>
+          <div class="formInputBlock">
+            <label for="loginPassword">Password</label>
+            <input type="password" name="loginPassword" id="login_password" />
+          </div>
+          <div class="formInputBlock">
+            <button type="submit">Log In</button>
+          </div>
+        </form>
+
+        <!-- SignUp Form -->
+        <form action="" id="signUpForm" class="hidden">
+          <div class="formInputBlock"><span class="heading">Sign Up</span></div>
+          <div class="formInputBlock">
+            <label for="fullName">Your Full Name</label>
+            <input type="text" name="fullName" id="signUp_fullName" />
+          </div>
+          <div class="formInputBlock">
+            <label for="signUpEmail">Your Email Address</label>
+            <input type="email" name="signUpEmail" id="signUp_email" />
+          </div>
+          <div class="formInputBlock">
+            <label for="signUpPassword">Choose Password</label>
+            <input type="password" name="signUpPassword" id="signUp_password" />
+          </div>
+          <div class="formInputBlock">
+            <label for="signUpPasswordConfirm">Confirm Password</label>
+            <input
+              type="password"
+              name="signUpPasswordConfirm"
+              id="signUp_passwordConfirm"
+            />
+          </div>
+          <div class="formInputBlock">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+
+        <!-- Register Action -->
+        <!-- <div class="form__devider"></div> -->
+        <div class="formInputBlock" id="registerCallFrmLoginForm">
+          <div class="form__devider"></div>
+          <div>Not a member?</div>
+          <br /><button id="signInFormBtn">Please register</button>
+        </div>
+        <!-- Login Action -->
+        <div class="formInputBlock hidden" id="logInCallFrmLoginForm">
+          <div class="form__devider"></div>
+          <div>Already a member?</div>
+          <br /><button id="logInFormBtn">Please Login</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------header--------------------- -->
+    <header id="home" class="flex-row">
+      <div id="logo">CinePro</div>
+      <div class="nav__hamburger flex-row">
+        <div class="nav__hamburger__ham"></div>
+      </div>
+      <nav id="nav-menu" class="hide_nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="">Contact us</a></li>
+          <li><button id="logInBtnHeader">Log In</button></li>
+          <input
+            id="searchBox"
+            class=""
+            type="text"
+            placeholder="Search by movie name"
+          />
+          <button id="searchBtn"><i class="fa fa-search"></i></button>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ---------------slider--------------------- -->
+    <div id="slider" class="flex-row">
+      <div class="cover"></div>
+      <div class="left">
+        <div class="head-title flex-row">
+          <div class="head-title-translate hide" id="title1">
+            <div class="movie-title">
+              Joker (2019)
+            </div>
+            <div class="movie-headline">
+              Joker is a 2019 American psychological thriller film directed and
+              produced by Todd Phillips, who co-wrote the screenplay with Scott
+              Silver. The film, based on ...
+            </div>
+            <div class="movie-headline-rating">
+              IMDB Ratings: 8.5<span>/10</span> from 806,083 users
+            </div>
+          </div>
+          <div class="head-title-translate hide" id="title2">
+            <div class="movie-title">
+              1917 (2019)
+            </div>
+            <div class="movie-headline">
+              1917 is a 2019 British war adventure film directed, co-written,
+              and produced by Sam Mendes. The film stars George MacKay and
+              Dean-Charles Chapman, with Mark Strong, Andrew Scott, Richard
+              Madden, Claire Duburcq, Colin Firth and Benedict Cumberbatch in
+              supporting roles.
+            </div>
+            <div class="movie-headline-rating">
+              IMDB Ratings: 8.3<span>/10</span> from 325,138 users
+            </div>
+          </div>
+          <div class="head-title-translate hide" id="title3">
+            <div class="movie-title">
+              Jumanji: The Next Level (2019)
+            </div>
+            <div class="movie-headline">
+              Jumanji: The Next Level is a 2019 American fantasy adventure
+              comedy film directed by Jake Kasdan and co-written by Kasdan, Jeff
+              Pinkner, and Scott ...
+            </div>
+            <div class="movie-headline-rating">
+              IMDB Ratings: 6.7<span>/10</span> from 150,650 users
+            </div>
+          </div>
+        </div>
+        <div class="slider-btn flex-row">
+          <button id="watch-trailer">Watch Trailer</button>
+          <button id="watch">Download</button>
+          <!-- <button id="add-playlist">+ Playlist</button> -->
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="img-container flex-row">
+          <div class="img-container-holder flex-row" id="translate">
+            <img
+              class="slider-img-poster"
+              id="one"
+              src="./images/joker-poster-main2.jpg"
+              alt=""
+            />
+            <img
+              class="slider-img-poster"
+              id="two"
+              src="./images/1917-british-movie-poster.jpg"
+              alt=""
+            />
+            <img
+              class="slider-img-poster"
+              id="three"
+              src="./images/JumanjiTheNextLevelTeaserPoster.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="dot-container flex-row">
+        <span id="1" class="dot active"></span>
+        <span id="2" class="dot"></span>
+        <span id="3" class="dot"></span>
+      </div>
+    </div>
+
+    <!-- main-content -->
+    <div id="main-content" class="flex-row">
+      <div class="main-content-heading full-width">
+        Recently Added
+      </div>
+      <div class="list-of-uploaded">
+        <div class="list-of-uploaded__container">
+          <!-- post1 -->
+          <a href="./details.html">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img
+                  src="./images/JumanjiTheNextLevelTeaserPoster.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="upload-post-title">
+                Jumanji: The next level (2020)
+              </div>
+            </div>
+          </a>
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/A_Quiet_Place_Part_II.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                A Quiet Place Part II (2020)
+              </div>
+            </div>
+          </a>
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/tanet.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                Tanet(2020)
+              </div>
+            </div>
+          </a>
+
+          <!-- post2 -->
+          <a href="./tmp.html">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/joker-poster-main2.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                Joker (2019)
+              </div>
+            </div>
+          </a>
+
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/1917-british-movie-poster.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                1917 (2019)
+              </div>
+            </div>
+          </a>
+
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/the lion king poster.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                The Lion King (2019)
+              </div>
+            </div>
+          </a>
+
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img
+                  src="./images/star-wars-episode-9-poster-full_1566673956242.webp"
+                  alt=""
+                />
+              </div>
+              <div class="upload-post-title">
+                Star Wars: The Rise of Skywalker (2019)
+              </div>
+            </div>
+          </a>
+
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/Ford vs ferrari poster.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                Ford v Ferrari (2019)
+              </div>
+            </div>
+          </a>
+
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img
+                  src="./images/Frozen 2 (2019) Fan Poster by mintmovi3 on DeviantArt.png"
+                  alt=""
+                />
+              </div>
+              <div class="upload-post-title">
+                Frozen II (2019)
+              </div>
+            </div>
+          </a>
+
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/alladdin 2019.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                Aladdin (2019)
+              </div>
+            </div>
+          </a>
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/FFH.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                Spider-Man: Far From Home (2019)
+              </div>
+            </div>
+          </a>
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/IT chp 2.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                IT: Chapter II (2019)
+              </div>
+            </div>
+          </a>
+          <!-- post2 -->
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/John wick chapter III.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                John Wick Chapter III (2019)
+              </div>
+            </div>
+          </a>
+          <!-- post2 -->
+          <a href="#">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/Avengers end game.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                Avengers: Endgame (2019)
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/Avengers end game.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                Avengers: Endgame (2019)
+              </div>
+            </div>
+          </a>
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img src="./images/John wick chapter III.jpg" alt="" />
+              </div>
+              <div class="upload-post-title">
+                John Wick Chapter III (2019)
+              </div>
+            </div>
+          </a>
+          <a href="#home">
+            <div class="upload-post-box">
+              <div class="upload-post-img">
+                <img
+                  src="./images/Frozen 2 (2019) Fan Poster by mintmovi3 on DeviantArt.png"
+                  alt=""
+                />
+              </div>
+              <div class="upload-post-title">
+                Frozen II (2019)
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="pages">
+        <a href="">Previous</a>
+        <a href="" class="active">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <span>...</span>
+        <a href="">11</a>
+        <a href="">12</a>
+        <a href="">Next</a>
+      </div>
+
+      <div id="#categorywise_list">
+        <div class="main-content-heading full-width">
+          Categories
+          <div class="title__devider"></div>
+        </div>
+        <div class="category_section">
+          <ul>
+            <li><a href="#"> Hollywood</li></a>
+            <li><a href="#"> Bollywood</li></a>
+            <li><a href="#"> Web Series</li></a>
+          </ul>
+        </div>
+  
+        <div class="main-content-heading full-width">
+          Genres
+          <div class="title__devider"></div>
+        </div>
+        <div class="category_section">
+          <ul>
+            <li><a href="#"> Action</li></a>
+            <li><a href="#"> Adventure</li></a>
+            <li><a href="#"> Animation</li></a>
+            <li><a href="#"> Biography  </li></a>
+            <li><a href="#"> Comedy</li></a>
+            <li><a href="#"> Crime</li></a>
+            <li><a href="#"> Documentary</li></a>
+            <li><a href="#"> Drama</li></a>
+            <li><a href="#"> Family</li></a>
+            <li><a href="#"> Fantasy</li></a>
+            <li><a href="#"> Film Noir</li></a>
+            <li><a href="#"> History</li></a>
+            <li><a href="#"> Horror</li></a>
+            <li><a href="#"> Music</li></a>
+            <li><a href="#"> Musical</li></a>
+            <li><a href="#"> Mystery</li></a>
+            <li><a href="#"> Romance</li></a>
+            <li><a href="#"> Sci-Fi</li></a>
+            <li><a href="#"> Short Film</li></a>
+            <li><a href="#"> Sport</li></a>
+            <li><a href="#"> Superhero</li></a>
+            <li><a href="#"> Thriller</li></a>
+            <li><a href="#"> War</li></a>
+            <li><a href="#"> Western</li></a>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer__devider"></div>
+    <footer id="footer" class="flex-row full-width">
+      <ul>
+        <li class="footer-logo">CinePro </li>
+        <li>Any query? write us at cinepro@ex.com</li>
+        <li>DCMA</li>
+        <li>CinePro Copyright &copy; 2020 | All Rights Reserved</li>
+      </ul>
+    </footer>
+
+    <div class="footer__devider"></div>
+    <div id="Copyright-section">
+      <div>Copyright &copy; Designed and developed by <span> &nbsp; Rahul Prajapati</span></div>
+    </div>
+
+    <script src="./js/jQuery-v3.5.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

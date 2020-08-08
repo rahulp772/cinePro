@@ -1,0 +1,308 @@
+@font-face {
+  font-family: sfPro;
+  src: url("../fonts/FontsFree-Net-SFProDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: sfProBold;
+  src: url("../fonts/SF Pro Display Bold.ttf");
+}
+@font-face {
+  font-family: paytone;
+  src: url("../fonts/PaytoneOne-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // background: #161616;
+  background: #000;
+  font-family: sfPro;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.full-width {
+  width: 100%;
+}
+
+// Scrollbar Styling
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #61892f;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #86c232;
+}
+
+@import "./login";
+@import "./header";
+@import "./slider";
+@import "./main-content";
+@import "./detailPage";
+@import "./footer";
+
+
+@media only screen and (max-width: 320px){
+  #slider{
+    .head-title{
+      font-size: 2rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 415px) {
+ 
+  // ------------------------- Main Content -----------------------------
+  #main-content {
+    padding: 20px 0;
+    .main-content-heading {
+      text-align: center;
+      .title__devider {
+        height: 2px;
+        width: 30%;
+        background: #86c232;
+        margin: 10px auto 0 auto;
+      }
+    }
+    .list-of-uploaded__container {
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    }
+    .upload-post-box {
+      margin: 3rem 0.5rem;
+      height: 16rem;
+      width: 10rem;
+    }
+  }
+
+  //  --------------------------Hidden Fields ----------------------------
+  .footer__devider {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  //--------------------------------- Slider ------------------------------
+
+  #slider {
+    min-height: 100vh;
+    padding-bottom: 50px;
+    // position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    .left {
+      display: flex;
+      width: auto !important;
+      order: 3;
+      padding: 0;
+      flex-direction: column;
+      .head-title {
+        justify-content: flex-start;
+        text-align: center;
+        width: 100%;
+        height: 320px !important;
+        margin: 0;
+        .head-title-translate {
+          position: absolute;
+          transition: all 0.4s ease-in;
+          user-select: none;
+          .movie-headline {
+            width: auto;
+            margin-top: 20px;
+            padding-right: 0;
+            margin: 0;
+            padding: 0 25px;
+          }
+          .movie-headline-rating {
+            margin-top: 25px;
+          }
+          .movie-title {
+            transition: all 0.8s;
+            margin-bottom: 25px;
+          }
+        }
+      }
+      .slider-btn {
+        // padding: 0px 0 0 100px;
+        align-self: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        button {
+          margin-right: 0 !important;
+          width: 150px;
+          height: 40px;
+        }
+      }
+    }
+    .right {
+      order: 1;
+      .img-container {
+        height: 550px;
+        width: 290px;
+        margin-left: 0 !important;
+        margin: 0 auto !important;
+      }
+    }
+
+    .dot-container {
+      height: 100%;
+      width: 100%;
+      flex-direction: row;
+      order: 1;
+      margin-bottom: 20px;
+      .dot {
+        margin: 0px 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  // -------------------------- Slider --------------------
+  #slider {
+    .left {
+      width: 40%;
+      .head-title {
+        height: 400px;
+      }
+      .slider-btn {
+        padding: 0 0 0 80px;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        button {
+          width: 80%;
+          height: 40px;
+        }
+      }
+    }
+    .right {
+      .img-container {
+        margin-left: 30%;
+      }
+    }
+  }
+}
+
+// ------------------- Grid ---------------------------
+#main-content{
+  .list-of-uploaded__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    height: auto;
+    width: 100%;
+    grid-gap: 10px;
+    margin: 0 0px;
+    justify-items: center;
+  }
+  }
+
+// only for menu
+@media only screen and (max-width: 940px){
+    // -------------------Header--------------------------
+    header {
+      width: auto;
+      justify-content: space-between;
+      padding: 0 30px;
+      #logo {
+        margin-left: 0;
+      }
+      .nav__hamburger {
+        // position: sticky;
+        display: flex;
+        // z-index: 15;
+        // display: none;
+      }
+    }
+    #nav-menu {
+      display: block;
+      margin-right: 0;
+      margin-top: 70px;
+      transition: all 0.2s;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: calc(100% - 70px);
+      width: auto;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.877);
+      backdrop-filter: blur(10px);
+      transition: all 0.8s ease;
+      ul {
+        margin: 0;
+        padding: 20px 0 20px 0;
+      }
+      li {
+        display: block;
+        border-radius: 10px;
+        margin: 0;
+        a {
+          display: block;
+          color: white;
+          padding: 10px 20px;
+        }
+      }
+      &.hide_nav {
+        transform: translateY(2000px);
+      }
+      &.show_nav {
+        transform: translateY(0px);
+      }
+    }
+  
+    // -------------------------- Login - signup form -----------------------
+  
+    .logInPopupScreen {
+      #close_btn {
+        margin: 40px 25px 0 0;
+        cursor: pointer;
+      }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+  // -------------------------- Slider --------------------
+  #slider {
+    .left {
+      width: 40%;
+    }
+    .head-title {
+      width: 100%;
+      height: 400px;
+    }
+    .slider-btn {
+      padding: 0 auto;
+      width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      button {
+        margin: 0 15px 15px 0;
+        width: 150px;
+        height: 40px;
+      }
+    }
+  }
+}

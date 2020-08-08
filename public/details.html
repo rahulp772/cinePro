@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>CinePro | Download and watch latest movies</title>
+  </head>
+  <body>
+    <!-- ------------------LogIn Screen------------ -->
+    <div class="blurbg hidden">
+      <div id="logInPopupScreen" class="logInPopupScreen hidden">
+        <div id="close_btn">
+          <div class="ham"></div>
+        </div>
+        <div class="logo">CinePro</div>
+        <div class="tagline">Download latest movies and web series</div>
+
+        <!-- Log In Form -->
+        <form action="" id="logInForm">
+          <div class="formInputBlock"><span class="heading">Log In</span></div>
+          <div class="formInputBlock">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" name="loginEmail" id="login_email" />
+          </div>
+          <div class="formInputBlock">
+            <label for="loginPassword">Password</label>
+            <input type="password" name="loginPassword" id="login_password" />
+          </div>
+          <div class="formInputBlock">
+            <button type="submit">Log In</button>
+          </div>
+        </form>
+
+        <!-- SignUp Form -->
+        <form action="" id="signUpForm" class="hidden">
+          <div class="formInputBlock"><span class="heading">Sign Up</span></div>
+          <div class="formInputBlock">
+            <label for="fullName">Your Full Name</label>
+            <input type="text" name="fullName" id="signUp_fullName" />
+          </div>
+          <div class="formInputBlock">
+            <label for="signUpEmail">Your Email Address</label>
+            <input type="email" name="signUpEmail" id="signUp_email" />
+          </div>
+          <div class="formInputBlock">
+            <label for="signUpPassword">Choose Password</label>
+            <input type="password" name="signUpPassword" id="signUp_password" />
+          </div>
+          <div class="formInputBlock">
+            <label for="signUpPasswordConfirm">Confirm Password</label>
+            <input
+              type="password"
+              name="signUpPasswordConfirm"
+              id="signUp_passwordConfirm"
+            />
+          </div>
+          <div class="formInputBlock">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+
+        <!-- Register Action -->
+        <!-- <div class="form__devider"></div> -->
+        <div class="formInputBlock" id="registerCallFrmLoginForm">
+          <div class="form__devider"></div>
+          <div>Not a member?</div>
+          <br /><button id="signInFormBtn">Please register</button>
+        </div>
+        <!-- Login Action -->
+        <div class="formInputBlock hidden" id="logInCallFrmLoginForm">
+          <div class="form__devider"></div>
+          <div>Already a member?</div>
+          <br /><button id="logInFormBtn">Please Login</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------header--------------------- -->
+    <!-- ----------------header--------------------- -->
+    <header id="home" class="flex-row">
+      <div id="logo">CinePro</div>
+      <div class="nav__hamburger flex-row">
+        <div class="nav__hamburger__ham"></div>
+      </div>
+      <nav id="nav-menu" class="hide_nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="">Contact us</a></li>
+          <li><button id="logInBtnHeader">Log In</button></li>
+          <input
+            id="searchBox"
+            class=""
+            type="text"
+            placeholder="Search by movie name"
+          />
+          <button id="searchBtn"><i class="fa fa-search"></i></button>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ---------------slider--------------------- -->
+    <div id="detail-cover" class="flex-row">
+      <div
+        class="cover"
+        style="
+          background-image: url('./images/JumanjiTheNextLevelTeaserPoster.jpg');
+        "
+      ></div>
+      <div class="detail-cover-left flex-row">
+        <div class="detail-cover-left-img">
+          <img src="./images/JumanjiTheNextLevelTeaserPoster.jpg" alt="" />
+        </div>
+      </div>
+      <div class="detail-cover-right flex-row">
+        <div class="detail-cover-right-container">
+          <div class="detail-cover-right-title">
+            Jumanji: The Next Level (2019)
+          </div>
+          <!-- <div class="detail-cover-right-title-devider"></div> -->
+          <div class="detail-cover-right-alldetails">
+            <div><span>Genres: </span>Adventure | Fantasy | Comedy</div>
+            <div><span>IMDB Rating: </span>6.7</div>
+            <div><span>Duration: </span>140 min</div>
+            <div><span>Quality: </span>Bluray</div>
+            <div><span>Resolutions: </span>720p | 1080p | 4K</div>
+            <div><span>File Format: </span>mkv | mp4</div>
+            <div><span>Language: </span>English [DD-5.1] | Hindi [DD-5.1]</div>
+            <div><span>Subtitles: </span>English | Hindi</div>
+          </div>
+          <div class="detail-cover-right-buttons">
+            <span>+ Trailer</span>
+            <span>+ Wishlist</span>
+            <span>+ Favourite</span>
+            <span>+ Share</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- details -->
+    <div id="details-container">
+      <!-- Storyline summary -->
+      <section>
+        <div class="story-heading">
+          StoryLine
+        </div>
+        <div class="details-container-storyline">
+          <p>
+            In 2019, three years after their adventure in Jumanji, Spencer
+            Gilpin, Anthony "Fridge" Johnson, Martha Kaply, and Bethany Walker
+            lead different lives, but plan a reunion brunch in Brantford, New
+            Hampshire, that year. Spencer, apprehensive of the meeting due to
+            his comparatively dull life, contemplates returning to Jumanji where
+            he had purpose, and spends his first night looking over the broken
+            video-game system he held onto. The following day, his friends visit
+            his home, meeting with Spencer's grandfather Eddie, who is
+            recovering from hip surgery, and Eddie's former friend and business
+            partner Milo Walker, who is visiting for an unknown reason. Learning
+            that they have no idea where Spencer is, the group searches the
+            house and finds the Jumanji game partially repaired in the basement.
+            Realizing Spencer returned to the game, his friends decide to follow
+            him.
+          </p>
+        </div>
+      </section>
+      <!-- screenshot section -->
+      <section>
+        <div class="screenshots-heading">
+          Screenshots
+        </div>
+        <div id="details-container-screenshots">
+          <div class="screenshots-container flex-row">
+            <div class="screenshots-img-container">
+              <img
+                src="./images/Screenshots/vlcsnap-2020-03-05-22h54m36s822.png"
+                alt=""
+              />
+            </div>
+            <div class="screenshots-img-container">
+              <img
+                src="./images/Screenshots/vlcsnap-2020-03-05-22h57m21s600.png"
+                alt=""
+              />
+            </div>
+            <div class="screenshots-img-container">
+              <img
+                src="./images/Screenshots/vlcsnap-2020-03-05-22h59m16s800.png"
+                alt=""
+              />
+            </div>
+            <!-- <div class="screenshots-img-container">
+            <img src="./images/Screenshots/vlcsnap-2020-03-05-23h03m02s379.png" alt="">
+          </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- download section -->
+      <section>
+        <div class="downloads-heading">
+          Download Links
+        </div>
+        <div id="details-container-downloads" class="flex-row">
+          <span class="quality-container">
+            <!-- <div class="download-quality">480p</div> -->
+          <div class="download-quality selected">720p</div>
+          <div class="download-quality">1080p</div>
+          <div class="download-quality">4K</div>
+        </span>
+        <span class="quality-details-container">
+          <div class="quality-details-all">
+            <div><span>Resolutions: </span>1280×720 px</div>
+            <div><span>FPS: </span>23.94</div>
+            <div><span>Size: </span>1.2 GB</div>
+            <div><span>File Format: </span>mkv</div>
+            <div><span>Aspect Ratio: </span>16:9</div>
+            <div><span>Codec: </span>H264</div>
+            <div><span>Audio: </span>English (DD-2.0 CH) | Hindi (DD-2.0 CH)</div>
+            <div><span>Subtitles: </span>English | Hindi</div>
+            <div class="download-btn"><a href="#">Direct Download</a></div>
+            <div class="download-btn"><a href="#">Download Torrent</a></div>        
+          </div>
+          <div class="quality-details-all hidden">
+            <div><span>Resolutions: </span>1920 x 1080 px</div>
+            <div><span>FPS: </span>23.94</div>
+            <div><span>Size: </span>3.6 GB</div>
+            <div><span>File Format: </span>mkv</div>
+            <div><span>Aspect Ratio: </span>16:9</div>
+            <div><span>Codec: </span>H264</div>
+            <div><span>Audio: </span>English (DD-6.0 CH) | Hindi (DD-5.1 CH)</div>
+            <div><span>Subtitles: </span>English | Hindi</div>
+            <div class="download-btn"><a href="#">Direct Download</a></div>
+            <div class="download-btn"><a href="#">Download Torrent</a></div>   
+          </div>
+          <div class="quality-details-all hidden">
+            <div><span>Resolutions: </span>4096 × 2160 px</div>
+            <div><span>FPS: </span>23.94</div>
+            <div><span>Size: </span>9.8 GB</div>
+            <div><span>File Format: </span>mkv</div>
+            <div><span>Aspect Ratio: </span>16:9</div>
+            <div><span>Codec: </span>H264</div>
+            <div><span>Audio: </span>English (DD-6.0 CH) | Hindi (DD-5.1 CH)</div>
+            <div><span>Subtitles: </span>English | Hindi</div>
+            <div class="download-btn"><a href="#">Direct Download</a></div>
+            <div class="download-btn"><a href="#">Download Torrent</a></div>
+          </div>
+        </span>
+        </div>
+      </section>
+
+      <section>
+
+      </section>
+    </div>
+    <!-- Footer -->
+    <div class="footer__devider"></div>
+    <footer id="footer" class="flex-row full-width">
+      <ul>
+        <li class="footer-logo">CinePro </li>
+        <li>Any query? write us at cinepro@ex.com</li>
+        <li>DCMA</li>
+        <li>CinePro Copyright &copy; 2020 | All Rights Reserved</li>
+      </ul>
+    </footer>
+
+    <div class="footer__devider"></div>
+    <div id="Copyright-section">
+      <div>Copyright &copy; Designed and developed by <span> &nbsp; Rahul Prajapati</span></div>
+    </div>
+    <script src="./js/jQuery-v3.5.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/detailPage.js"></script>
+  </body>
+</html>

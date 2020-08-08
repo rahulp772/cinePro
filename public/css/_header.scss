@@ -1,0 +1,128 @@
+header {
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  align-items: center;
+  justify-content: space-between;
+  font-family: sfPro;
+  color: white;
+  transition: all 0.2s;
+}
+
+#logo {
+  // height: 70px;
+  margin-left: 80px;
+  font-size: 30px;
+  font-family: paytone;
+  color: #ffffff;
+}
+.hide_nav{
+  transform: translateX(0px);
+}
+.nav__hamburger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  // background: green;
+  .nav__hamburger__ham {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3px;
+    width: 30px;
+    background: white;
+    transition: all .5s;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 30px;
+      background: white;
+      transition: all .5s;
+    }
+    &::before {
+      transform: translateY(-10px);
+    }
+    &::after {
+      transform: translateY(10px);
+    }
+  }
+  &.open {
+    .nav__hamburger__ham {
+      background: transparent;
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+#nav-menu {
+  margin-right: 100px;
+  transition: all 0.2s;
+  li {
+    display: inline-block;
+    border-radius: 10px;
+    a {
+      display: block;
+      color: white;
+      padding: 10px 20px;
+    }
+    &:hover {
+      cursor: pointer;
+      background: #86c232;
+    }
+    #logInBtnHeader {
+      font-family: sfPro;
+      border-radius: 10px;
+      background: transparent;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      &:focus {
+        outline: 0;
+      }
+    }
+    transition: all 0.2s;
+  }
+  #searchBox {
+    color: white;
+    height: 30px;
+    width: 150px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #86c232;
+    transition: all 0.5s ease 0.15s;
+    font-style: italic;
+    &:focus {
+      outline: none;
+      color: white;
+    }
+  }
+
+  #searchBtn {
+    transition: all 0.2s;
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    &:hover {
+      cursor: pointer;
+      background: #86c232;
+    }
+    &:focus {
+      outline: none;
+    }
+    &.typed{
+      background: #86c232;
+    }
+  }
+}

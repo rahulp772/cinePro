@@ -1,0 +1,53 @@
+#slider.flex-row
+      .cover
+      .left
+        .head-title.flex-row
+          #title1.head-title-translate.hide
+            .movie-title
+              | Joker (2019)
+            .movie-headline
+              | Joker is a 2019 American psychological thriller film directed and
+              | produced by Todd Phillips, who co-wrote the screenplay with Scott
+              | Silver. The film, based on ...
+            .movie-headline-rating
+              | IMDB Ratings: 8.5
+              span /10
+              |  from 806,083 users
+          #title2.head-title-translate.hide
+            .movie-title
+              | 1917 (2019)
+            .movie-headline
+              | 1917 is a 2019 British war adventure film directed, co-written,
+              | and produced by Sam Mendes. The film stars George MacKay and
+              | Dean-Charles Chapman, with Mark Strong, Andrew Scott, Richard
+              | Madden, Claire Duburcq, Colin Firth and Benedict Cumberbatch in
+              | supporting roles.
+            .movie-headline-rating
+              | IMDB Ratings: 8.3
+              span /10
+              |  from 325,138 users
+          #title3.head-title-translate.hide
+            .movie-title
+              | Jumanji: The Next Level (2019)
+            .movie-headline
+              | Jumanji: The Next Level is a 2019 American fantasy adventure
+              | comedy film directed by Jake Kasdan and co-written by Kasdan, Jeff
+              | Pinkner, and Scott ...
+            .movie-headline-rating
+              | IMDB Ratings: 6.7
+              span /10
+              |  from 150,650 users
+        .slider-btn.flex-row
+          button#watch Watch
+          button#watch-trailer Trailer
+          button#add-playlist + Playlist
+      .right
+        .img-container.flex-row
+          #translate.img-container-holder.flex-row
+            img#one.slider-img-poster(src='./images/joker-poster-main2.jpg', alt='')
+            img#two.slider-img-poster(src='./images/1917-british-movie-poster.jpg', alt='')
+            img#three.slider-img-poster(src='./images/JumanjiTheNextLevelTeaserPoster.jpg', alt='')
+      .dot-container.flex-row
+        span#1.dot.active
+        span#2.dot
+        span#3.dot

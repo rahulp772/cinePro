@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "c4e2c7b7-da1d-4667-ad84-f6a4fc1d69b2",
+		"name": "CinePro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Sign Up",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fc377ea9-ec9b-4189-9e57-9b2ff43769ac",
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Hello",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\":\"tmp\",\r\n\t\"email\":\"tmp@gmail.com\",\r\n\t\"photo\":\"t.jpg\",\r\n\t\"password\":\"pass1234\",\r\n\t\"passwordConfirm\":\"pass1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/user/signup",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log In",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "239b5e0d-4a6a-47f3-ae0b-2682ba37bf98",
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"pass1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/user/login",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get All Movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "test-header",
+								"value": "Hello",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}api/v1/movies?fields=movieName",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"movies"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "movieName"
+								}
+							]
+						},
+						"description": "This is default route. we need to show list when user visit website.\r\nThis route support below filters in query string.\r\n1) fields: specify fields name which you need to show in response. by default, all fields will be shown. ex. ?fields=movieName,rating\r\n2) sort: you can sort results based on fields. ex. ?sort=rating or ?sort=-rating\r\n3) page: for pagination ex. ?page=2\r\n4) limit: limit your results. ex. ?limit=5\r\n\r\n*this route also support nesting routes ex. /movies?page=1&fields=movieName&sort=movieName (field order doesn't matter)."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/movies/5eedf027973c2c0778543f96",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"movies",
+								"5eedf027973c2c0778543f96"
+							]
+						},
+						"description": "Get one movie based on document ID."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Add New Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieName\": \"Spider Man: Far from Home\",\r\n    \"genre\": [\"Action\", \"Adventure\", \"Fantasy\"],\r\n    \"category\": [\"Hollywood\", \"Dual-Audio\"],\r\n    \"releaseYear\": 2020,\r\n    \"rating\": 6.8,\r\n    \"ratingQuantity\": 125050,\r\n    \"duration\":\"140 min\",\r\n    \"quality\": \"Bluray\",\r\n    \"size\": [1.3, 2.8, 6.9],\r\n    \"resolution\":[\"720p\", \"1080p\" , \"4K\"],\r\n    \"format\": \"mkv\",\r\n    \"fps\": 23.96,\r\n    \"codec\": \"H264\",\r\n    \"audioFormat\":[\"English[5.1CH]\",\"Hindi[5.1]\"],\r\n    \"subtitles\": \"English\",\r\n    \"screenshots\": [\"screenshot-1.jpg\", \"screenshot-2.jpg\", \"screenshot-3.jpg\"],\r\n    \"onlineWatchLink\": [\"https://server1.mov/cinepro/watch/key/JTNL20720p.mkv\", \"https://server1.mov/cinepro/watch/key/JTNL201080p.mkv\", \"https://server1.mov/cinepro/watch/key/JTNL204k.mkv\"],\r\n    \"downloadLink\":[\"https://server1.mov/cinepro/key/JTNL20720p.mkv\", \"https://server1.mov/cinepro/key/JTNL201080p.mkv\", \"https://server1.mov/cinepro/key/JTNL204k.mkv\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/movies",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"movies"
+							]
+						},
+						"description": "Add new movie to database.\r\nThis route is protected so you need to logged in as admin and only admin can access this route."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/user",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"user"
+							]
+						},
+						"description": "Get list of all users.\r\nThis route is protected so you need to logged in as admin and only admin can access this route."
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/user/5ee237619cc4fa2c3c261fda",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"user",
+								"5ee237619cc4fa2c3c261fda"
+							]
+						},
+						"description": "Get one user based on document ID or email address.\r\nThis route is protected so you need to logged in as admin and only admin can access this route."
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"abc2\",\n\t\"email\":\"abc2@gmail.com\",\n\t\"photo\":\"abc2.jpg\",\n\t\"password\":\"pass1234\",\n\t\"passwordConfirm\":\"pass1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/user/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"user",
+								""
+							]
+						},
+						"description": "Add new user to database.\r\nThis route is protected so you need to logged in as admin and only admin can access this route."
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"abc3@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/user/5ee22d9173901a209446f2f2",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"user",
+								"5ee22d9173901a209446f2f2"
+							]
+						},
+						"description": "update users.\r\nThis route is protected so you need to logged in as admin and only admin can access this route."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movies",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 8.6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/movies/5eedf027973c2c0778543f96",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"movies",
+								"5eedf027973c2c0778543f96"
+							]
+						},
+						"description": "update movie based on document ID. This route is protected so you need to logged in as admin and only admin can access this route."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/movies/5ef0a4058cf10522f80efce1",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"movies",
+								"5ef0a4058cf10522f80efce1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

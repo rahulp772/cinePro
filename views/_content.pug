@@ -1,0 +1,24 @@
+#main-content.flex-row
+      .main-content-heading
+        | Recently Added
+      .list-of-uploaded.full-width.flex-row
+        //- // post1
+        each movie in movies
+          a(href=`/${movie.slug}`)
+            .upload-post-box
+              .upload-post-img
+                img(src= movie.poster, alt='')
+              .upload-post-title
+                span=`${movie.movieName} (${movie.releaseYear})` 
+
+      .pages
+        a(href='') Previous
+        a.active(href='') 1
+        a(href='') 2
+        a(href='') 3
+        a(href='') 4
+        span ...
+        a(href='') 10
+        a(href='') 11
+        a(href='') 12
+        a(href='') Next

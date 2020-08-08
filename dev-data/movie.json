@@ -1,0 +1,247 @@
+[
+  {
+    "movieName": "Jumanji: The Next Level",
+    "genre": ["Action", "Adventure", "Drama", "Fantasy"],
+    "category": ["Hollywood", "Dual-Audio"],
+    "releaseYear": 2020,
+    "rating": 6.8,
+    "ratingQuantity": 125050,
+    "duration": "140 min",
+    "quality": "Bluray",
+    "size": [1.3, 2.8, 6.9],
+    "resolution": ["720p", "1080p", "4K"],
+    "format": "mkv",
+    "fps": 23.96,
+    "codec": "H264",
+    "audioFormat": ["English[5.1CH]", "Hindi[5.1]"],
+    "subtitles": "English",
+    "screenshots": ["screenshot-1.jpg", "screenshot-2.jpg", "screenshot-3.jpg"],
+    "onlineWatchLink": [
+      "https://server1.mov/cinepro/watch/key/JTNL20720p.mkv",
+      "https://server1.mov/cinepro/watch/key/JTNL201080p.mkv",
+      "https://server1.mov/cinepro/watch/key/JTNL204k.mkv"
+    ],
+    "downloadLink": [
+      "https://server1.mov/cinepro/key/JTNL20720p.mkv",
+      "https://server1.mov/cinepro/key/JTNL201080p.mkv",
+      "https://server1.mov/cinepro/key/JTNL204k.mkv"
+    ]
+  },
+  {
+    "movieName": "Joker",
+    "genre": ["Action", "Drama", "Fantasy"],
+    "category": ["Hollywood", "Dual-Audio"],
+    "releaseYear": 2020,
+    "rating": 8.5,
+    "ratingQuantity": 225135,
+    "duration": "122 min",
+    "quality": "Bluray",
+    "size": [1.0, 2.1, 4.8],
+    "resolution": ["720p", "1080p", "4K"],
+    "format": "mkv",
+    "fps": 23.96,
+    "codec": "H264",
+    "audioFormat": ["English[5.1CH]", "Hindi[5.1]"],
+    "subtitles": "English",
+    "screenshots": ["screenshot-1.jpg", "screenshot-2.jpg", "screenshot-3.jpg"],
+    "onlineWatchLink": [
+      "https://server1.mov/cinepro/watch/key/JOKER20720p.mkv",
+      "https://server1.mov/cinepro/watch/key/JOKER201080p.mkv",
+      "https://server1.mov/cinepro/watch/key/JOKER204k.mkv"
+    ],
+    "downloadLink": [
+      "https://server1.mov/cinepro/key/JOKER20720p.mkv",
+      "https://server1.mov/cinepro/key/JOKER201080p.mkv",
+      "https://server1.mov/cinepro/key/JOKER204k.mkv"
+    ]
+  },
+  {
+    "movieName": "1917",
+    "genre": ["Action", "Adventure"],
+    "category": ["Hollywood", "Dual-Audio"],
+    "releaseYear": 2019,
+    "rating": 8.1,
+    "ratingQuantity": 105862,
+    "duration": "119 min",
+    "quality": "Bluray",
+    "size": [1.1, 2.5, 6.1],
+    "resolution": ["720p", "1080p", "4K"],
+    "format": "mkv",
+    "fps": 23.96,
+    "codec": "H264",
+    "audioFormat": ["English[5.1CH]", "Hindi[5.1]"],
+    "subtitles": "English",
+    "screenshots": ["screenshot-1.jpg", "screenshot-2.jpg", "screenshot-3.jpg"],
+    "onlineWatchLink": [
+      "https://server1.mov/cinepro/watch/key/191719720p.mkv",
+      "https://server1.mov/cinepro/watch/key/1917191080p.mkv",
+      "https://server1.mov/cinepro/watch/key/1917194k.mkv"
+    ],
+    "downloadLink": [
+      "https://server1.mov/cinepro/key/191719720p.mkv",
+      "https://server1.mov/cinepro/key/1917191080p.mkv",
+      "https://server1.mov/cinepro/key/1917194k.mkv"
+    ]
+  },
+  {
+    "movieName": "The Lion King",
+    "genre": ["Animation", "Adventure", "Drama"],
+    "category": ["Hollywood", "Dual-Audio"],
+    "releaseYear": 2019,
+    "rating": 6.9,
+    "ratingQuantity": 193948,
+    "duration": "118 min",
+    "quality": "Bluray",
+    "size": [1.0, 2.1, 6.5],
+    "resolution": ["720p", "1080p", "4K"],
+    "format": "mkv",
+    "fps": 23.96,
+    "codec": "H264",
+    "audioFormat": ["English[5.1CH]", "Hindi[5.1]"],
+    "subtitles": "English",
+    "screenshots": ["screenshot-1.jpg", "screenshot-2.jpg", "screenshot-3.jpg"],
+    "onlineWatchLink": [
+      "https://server1.mov/cinepro/watch/key/thelionking19720p.mkv",
+      "https://server1.mov/cinepro/watch/key/thelionking191080p.mkv",
+      "https://server1.mov/cinepro/watch/key/thelionking194k.mkv"
+    ],
+    "downloadLink": [
+      "https://server1.mov/cinepro/key/thelionking19720p.mkv",
+      "https://server1.mov/cinepro/key/thelionking191080p.mkv",
+      "https://server1.mov/cinepro/key/thelionking194k.mkv"
+    ]
+  },
+  {
+    "movieName": "Avengers: Endgame",
+    "genre": ["Action", "Adventure", "Drama"],
+    "category": ["Hollywood", "Dual-Audio"],
+    "releaseYear": 2019,
+    "rating": 8.4,
+    "ratingQuantity": 730203,
+    "duration": "181 min",
+    "quality": "Bluray",
+    "size": [1.0, 2.1, 6.5],
+    "resolution": ["720p", "1080p", "4K"],
+    "format": "mkv",
+    "fps": 23.96,
+    "codec": "H264",
+    "audioFormat": ["English[6.0CH]", "Hindi[5.1]"],
+    "subtitles": "English",
+    "screenshots": ["screenshot-1.jpg", "screenshot-2.jpg", "screenshot-3.jpg"],
+    "onlineWatchLink": [
+      "https://server1.mov/cinepro/watch/key/AvengersEndgame19720p.mkv",
+      "https://server1.mov/cinepro/watch/key/AvengersEndgame191080p.mkv",
+      "https://server1.mov/cinepro/watch/key/AvengersEndgame194k.mkv"
+    ],
+    "downloadLink": [
+      "https://server1.mov/cinepro/key/AvengersEndgame19720p.mkv",
+      "https://server1.mov/cinepro/key/AvengersEndgame191080p.mkv",
+      "https://server1.mov/cinepro/key/AvengersEndgame194k.mkv"
+    ]
+  },
+  {
+    "movieName": "Star Wars: Episode IX - The Rise of Skywalker",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "category": ["Hollywood", "Dual-Audio"],
+    "releaseYear": 2019,
+    "rating": 6.7,
+    "ratingQuantity": 333655,
+    "duration": "142 min",
+    "quality": "Bluray",
+    "size": [1.2, 2.8, 6.4],
+    "resolution": ["720p", "1080p", "4K"],
+    "format": "mkv",
+    "fps": 23.96,
+    "codec": "H264",
+    "audioFormat": ["English[5.1CH]", "Hindi[5.1]"],
+    "subtitles": "English",
+    "screenshots": ["screenshot-1.jpg", "screenshot-2.jpg", "screenshot-3.jpg"],
+    "onlineWatchLink": [
+      "https://server1.mov/cinepro/watch/key/SWEIXTROS19720p.mkv",
+      "https://server1.mov/cinepro/watch/key/SWEIXTROS191080p.mkv",
+      "https://server1.mov/cinepro/watch/key/SWEIXTROS194k.mkv"
+    ],
+    "downloadLink": [
+      "https://server1.mov/cinepro/key/SWEIXTROS19720p.mkv",
+      "https://server1.mov/cinepro/key/SWEIXTROS191080p.mkv",
+      "https://server1.mov/cinepro/key/SWEIXTROS194k.mkv"
+    ]
+  },
+  {
+    "movieName": "Ford v Ferrari",
+    "genre": ["Action", "Biography", "Drama"],
+    "category": ["Hollywood", "Dual-Audio"],
+    "releaseYear": 2019,
+    "rating": 8.1,
+    "ratingQuantity": 224521,
+    "duration": "152 min",
+    "quality": "Bluray",
+    "size": [1.2, 2.8, 6.4],
+    "resolution": ["720p", "1080p", "4K"],
+    "format": "mkv",
+    "fps": 23.96,
+    "codec": "H264",
+    "audioFormat": ["English[5.1CH]", "Hindi[5.1]"],
+    "subtitles": "English",
+    "screenshots": ["screenshot-1.jpg", "screenshot-2.jpg", "screenshot-3.jpg"],
+    "onlineWatchLink": [
+      "https://server1.mov/cinepro/watch/key/FVF19720p.mkv",
+      "https://server1.mov/cinepro/watch/key/FVF191080p.mkv",
+      "https://server1.mov/cinepro/watch/key/FVF194k.mkv"
+    ],
+    "downloadLink": [
+      "https://server1.mov/cinepro/key/FVF19720p.mkv",
+      "https://server1.mov/cinepro/key/FVF191080p.mkv",
+      "https://server1.mov/cinepro/key/FVF194k.mkv"
+    ]
+  },
+  {
+    "movieName": "Frozen II",
+    "genre": ["Animation", "Adventure", "Comedy"],
+    "category": ["Hollywood", "Dual-Audio"],
+    "releaseYear": 2019,
+    "rating": 6.9,
+    "ratingQuantity": 112401,
+    "duration": "103 min",
+    "quality": "Bluray",
+    "size": [1.1, 2.4, 5.2],
+    "resolution": ["720p", "1080p", "4K"],
+    "format": "mkv",
+    "fps": 23.96,
+    "codec": "H264",
+    "audioFormat": ["English[5.1CH]", "Hindi[5.1]"],
+    "subtitles": "English",
+    "screenshots": ["screenshot-1.jpg", "screenshot-2.jpg", "screenshot-3.jpg"],
+    "onlineWatchLink": [
+      "https://server1.mov/cinepro/watch/key/FrozenII19720p.mkv",
+      "https://server1.mov/cinepro/watch/key/FrozenII191080p.mkv",
+      "https://server1.mov/cinepro/watch/key/FrozenII194k.mkv"
+    ],
+    "downloadLink": [
+      "https://server1.mov/cinepro/key/FrozenII19720p.mkv",
+      "https://server1.mov/cinepro/key/FrozenII191080p.mkv",
+      "https://server1.mov/cinepro/key/FrozenII194k.mkv"
+    ]
+  },
+  {
+    "movieName": "Deadpool",
+    "genre": ["Action", "Adventure", "Comedy", "Sci-Fi"],
+    "category": "Hollywood",
+    "releaseYear": "2016",
+    "rating": "8.0",
+    "ratingQuantity": "874155",
+    "duration": "108",
+    "plot": "A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    "quality": "Bluray",
+    "size": ["2215", "", ""],
+    "resolution": ["720"],
+    "format": "mkv",
+    "fps": "24",
+    "codec": "h256",
+    "audioFormat": ["English", "Hindi"],
+    "subtitles": ["English"],
+    "onlineWatchLink": ["sdsds", "", ""],
+    "downloadLink": ["ddfdfd", "", ""]
+  }
+]

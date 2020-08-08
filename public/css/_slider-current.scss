@@ -1,0 +1,143 @@
+#slider {
+  min-height: 550px;
+  height: auto;
+  padding-bottom: 50px;
+  width: 100%;
+  position: relative;
+  transition: all 1s;
+  .cover {
+    position: absolute;
+    z-index: -1;
+    height: 550px;
+    width: 100%;
+    // background: url("../images/star-wars-episode-9-poster-full_1566673956242.webp") no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%) blur(20px);
+    -webkit-filter: brightness(50%) blur(20px);
+    transition: all 1s;
+  }
+  .head-title {
+    flex-direction: column;
+    justify-content: center;
+    width: 550px;
+    height: 460px;
+    font-family: sfProBold;
+    // font-weight: 100;
+    color: white;
+    font-size: 2.8rem;
+    padding: 0 0 0 100px;
+    position: relative;
+    .head-title-translate{
+      // background: #000;
+      position: absolute;
+      transition: all .4s ease-in;
+      user-select: none;
+    }
+    .movie-headline{
+      margin-top: 20px;
+      // font-style: italic;
+      font-family: sfPro;
+      font-size: 17px;
+      font-weight: normal;
+      color: rgb(226, 226, 226);
+    }
+    .movie-headline-rating{
+      margin-top: 25px;
+      // font-style: italic;
+      font-family: sfPro;
+      font-size: 16px;
+      font-weight: normal;
+      color: rgb(184, 184, 184);
+      span{
+        color: rgb(153, 153, 153);
+      }
+    }
+    .movie-title {
+      transition: all .8s;
+    }
+  }
+  .slider-btn {
+    padding: 0px 0 0 100px;
+    button {
+      margin-right: 30px;
+      background: #61892f;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 150px;
+      height: 40px;
+      &:hover {
+        background: #86c232;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .right {
+    .img-container {
+      height: 550px;
+      width: 100%;
+      margin-left: 50%;
+      overflow: hidden;
+      border-radius: 10px;  
+      .img-container-holder {
+        position: relative;
+        align-items: center;
+        height: 550px;
+        width: 290px;
+        transition: all .6s ease-in;
+        img {
+          height: 80%;
+          width: 100%;
+          border-radius: 5px;  
+        }
+      }
+    }
+  }
+  @keyframes slide {
+    0%{
+      transform: translateX(0px);
+    }
+    100%{
+      transform: translateX(-290px);
+    }
+  }
+  .show {
+    opacity: 1;
+  }
+  .hide {
+    opacity: 0;
+  }
+  .dot-container {
+    position: absolute;
+    right: 0;
+    margin-right: 80px;
+    // align-self: center;
+    height: 100%;
+    width: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .dot {
+      cursor: pointer;
+      display: block;
+      background: white;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      margin: 10px 0;
+    }
+    .active {
+      height: 12px;
+      width: 12px;
+      background: #61892f;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+  }
+}

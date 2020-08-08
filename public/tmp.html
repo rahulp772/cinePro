@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Download your favourite movies</title>
+  </head>
+  <body>
+    <!-- ----------------header--------------------- -->
+    <header id="home" class="flex-row">
+      <div id="logo">CinePro</div>
+      <nav id="nav-menu">
+        <ul>
+          <li>Home</li>
+          <li>Categories</li>
+          <li>Contact us</li>
+          <li>Log In</li>
+          <input
+            id="searchBox"
+            class="searchBox-hidden"
+            type="text"
+            placeholder="Search by movie name"
+          />
+          <button id="searchBtn"><i class="fa fa-search"></i></button>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ---------------slider--------------------- -->
+    <div id="detail-cover" class="flex-row">
+      <div
+        class="cover"
+        style="background-image: url('../images/joker-poster-main2.jpg');"
+      ></div>
+        <div class="detail-cover-left flex-row">
+            <div class="detail-cover-left-img">
+                <img src="./images/joker-poster-main2.jpg" alt="">
+            </div>   
+        </div>
+        <div class="detail-cover-right flex-row">
+          <div class="detail-cover-right-container">
+              <div class="detail-cover-right-title">
+                Joker (2019)
+              </div>
+              <!-- <div class="detail-cover-right-title-devider"></div> -->
+              <div class="detail-cover-right-alldetails">
+                <div><span>Genres: </span>Action | Drama</div>
+                <div><span>Cast: </span>Karen Gillan, Awkwafina, Danny DeVito, Dwayne Johnson</div>
+                <div><span>IMDB Rating: </span>6.7</div>
+                <div><span>Duration: </span>140 min</div>
+                <div><span>Quality: </span>Bluray</div>
+                <div><span>Resolutions: </span>720p | 1080p | 4K</div>
+                <div><span>File Format: </span>mkv</div>
+                <div><span>Language: </span>English</div>
+              </div> 
+              <div class="detail-cover-right-buttons">
+                <span>+ Wishlist</span>
+                <span>+ Favourite</span>
+                <!-- <span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" height="16" width="16" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg></span> -->
+                <span>+ Share</span>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- details -->
+    <div id="details-container">
+
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="flex-row full-width">
+      <div class="footer-logo">cinepro.com</div>
+      <div class="footer-query">Any Query? write us at cinepro@ex.com</div>
+      <div class="footer-copyright">
+        Copyright &copy; 2020 CinePro | All Rights Reserved
+      </div>
+    </footer>
+    <script src="./js/jQuery-v3.5.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
