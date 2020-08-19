@@ -86,10 +86,12 @@ a {
       }
     }
     .list-of-uploaded__container {
-      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)) !important;
+      grid-gap: 0 !important;
     }
     .upload-post-box {
-      margin: 3rem 0.5rem;
+      // margin: 3rem 0rem;
+      padding: 0;
       height: 16rem;
       width: 10rem;
     }
@@ -213,7 +215,7 @@ a {
     height: auto;
     width: 100%;
     grid-gap: 10px;
-    margin: 0 0px;
+    // margin: 0 0px;
     justify-items: center;
   }
   }

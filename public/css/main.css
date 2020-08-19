@@ -1154,11 +1154,12 @@ header {
     margin: 10px auto 0 auto;
   }
   #main-content .list-of-uploaded__container {
-    -ms-grid-columns: (minmax(10rem, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    -ms-grid-columns: (minmax(10rem, 1fr))[auto-fill] !important;
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)) !important;
+    grid-gap: 0 !important;
   }
   #main-content .upload-post-box {
-    margin: 3rem 0.5rem;
+    padding: 0;
     height: 16rem;
     width: 10rem;
   }
@@ -1303,7 +1304,6 @@ header {
   height: auto;
   width: 100%;
   grid-gap: 10px;
-  margin: 0 0px;
   justify-items: center;
 }
 
