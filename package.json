@@ -10,6 +10,7 @@
     "helmet": "^3.23.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.17",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
     "pug": "^3.0.0",
     "slugify": "^1.4.0",
@@ -19,7 +20,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "debug":"ndb server.js"
+    "debug": "ndb server.js"
   },
   "author": "Rahul Prajapati",
   "license": "ISC"

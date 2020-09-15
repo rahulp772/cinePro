@@ -1,11 +1,13 @@
 const express = require("express");
 const path = require('path');
 const helmet = require("helmet");
+const morgan = require('morgan');
 const AppError = require("./utils/appError");
 const movieRouter = require("./router/movieRouter");
 const userRouter = require("./router/userRouter");
 const errorController = require("./controllers/errController");
 const viewRouter = require("./router/viewRouter");
+const { format } = require("path");
 
 const app = express();
 
@@ -16,6 +18,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 // MIDDLEWARES-------------------------------------------------------------
 
+// Logger
+app.use(morgan('tiny'));
 // Serving Static files
 app.use(express.static(path.join(__dirname, 'public'))); // serve static files to server
 
