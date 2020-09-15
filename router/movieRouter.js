@@ -7,8 +7,9 @@ const router = express.Router();
 router
   .route("/")
   .get(movieController.getAllMovies)
-  .post(movieController.addMovie);
+  .post(authController.protectedRoutes, movieController.addMovie);
 
+router.use(authController.protectedRoutes);
 router
   .route("/:id")
   .get(movieController.getMovie)

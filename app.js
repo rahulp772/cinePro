@@ -7,7 +7,7 @@ const movieRouter = require("./router/movieRouter");
 const userRouter = require("./router/userRouter");
 const errorController = require("./controllers/errController");
 const viewRouter = require("./router/viewRouter");
-const { format } = require("path");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
@@ -20,6 +20,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Logger
 app.use(morgan('tiny'));
+
+// cookie Parser
+app.use(cookieParser());
 // Serving Static files
 app.use(express.static(path.join(__dirname, 'public'))); // serve static files to server
 
