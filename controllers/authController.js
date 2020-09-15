@@ -81,6 +81,15 @@ exports.protectedRoutes = catchAsync(async (req, res, next) => {
   next();
 });
 
+exports.userRole = (...roles) => {
+  return (req, res, next) => {
+    if(!roles.includes(req.user.role)){
+      return next(new AppError("You do not have permission to perform this task...", 400));
+    }
+    next();
+  }
+};
+
 exports.logOut = catchAsync(async (req, res, next) => {
   res.clearCookie("jwt");
 

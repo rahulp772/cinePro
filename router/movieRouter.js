@@ -7,13 +7,17 @@ const router = express.Router();
 router
   .route("/")
   .get(movieController.getAllMovies)
-  .post(authController.protectedRoutes, movieController.addMovie);
+  .post(
+    authController.userRole("admin"),
+    authController.protectedRoutes,
+    movieController.addMovie
+  );
 
 router.use(authController.protectedRoutes);
 router
   .route("/:id")
   .get(movieController.getMovie)
-  .patch(movieController.updateMovie)
-  .delete(movieController.deleteMovie);
+  .patch(authController.userRole("admin"), movieController.updateMovie)
+  .delete(authController.userRole("admin"), movieController.deleteMovie);
 
 module.exports = router;
