@@ -1,8 +1,7 @@
 const Movie = require("../models/movieModel");
-const AppError = require("../utils/appError");
-const catchAsync = require("../utils/catchAsync");
-const { update } = require("../models/movieModel");
-const Features = require('../utils/features');
+const AppError = require("../../utils/appError");
+const catchAsync = require("../../utils/catchAsync");
+const Features = require('../../utils/features');
 
 // const { json } = require("express");
 // const { compareSync } = require("bcryptjs");

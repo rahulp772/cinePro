@@ -10,7 +10,7 @@ const DB = process.env.LOCAL_DATABASE;
 const port = process.env.PORT;
 
 
-const db = mongoose
+mongoose
   .connect(DB, {
     useCreateIndex: true,
     useNewUrlParser: true,
@@ -18,12 +18,12 @@ const db = mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    console.log("DB Connected and Ready!");
+    console.log("DB connection successfully...");
   }).catch(err => {
     console.log("Something went wrong with database connection! Please see detailed Error message: ", err.message);
     return new AppError("Something went wrong with database connection! Please see detailed Error message: ", err.message, 500);
   });
 
-const server = app.listen(port, () => {
-  console.log("App Running...");
+app.listen(port, () => {
+  console.log("App running on port "+ port + "...");
 });

@@ -3,10 +3,10 @@ const path = require('path');
 const helmet = require("helmet");
 const morgan = require('morgan');
 const AppError = require("./utils/appError");
-const movieRouter = require("./router/movieRouter");
-const userRouter = require("./router/userRouter");
-const errorController = require("./controllers/errController");
-const viewRouter = require("./router/viewRouter");
+const movieRouter = require("./app/router/movieRouter");
+const userRouter = require("./app/router/userRouter");
+const errorController = require("./app/controllers/errController");
+const viewRouter = require("./app/router/viewRouter");
 const cookieParser = require("cookie-parser");
 
 const app = express();
