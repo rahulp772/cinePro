@@ -3,9 +3,6 @@ const AppError = require("../../utils/appError");
 const catchAsync = require("../../utils/catchAsync");
 const Features = require('../../utils/features');
 
-// const { json } = require("express");
-// const { compareSync } = require("bcryptjs");
-
 exports.getAllMovies = catchAsync(async (req, res, next) => {
   // let queryObj = { ...req.query };
   // const exclude = ["page", "limit", "sort", "fields"];
