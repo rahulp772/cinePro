@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const AppError = require("./utils/appError");
 const movieRouter = require("./app/router/movieRouter");
 const userRouter = require("./app/router/userRouter");
+const commentsRouter = require("./app/router/commentsRouter");
 const errorController = require("./app/controllers/errController");
 const viewRouter = require("./app/router/viewRouter");
 const cookieParser = require("cookie-parser");
@@ -39,6 +40,7 @@ app.use((req, res, next)=>{
 app.use("/", viewRouter);
 app.use("/cinepro/api/v1/movies/", movieRouter);
 app.use("/cinepro/api/v1/user/", userRouter);
+app.use("/cinePro/api/v1/comments/", commentsRouter);
 
 // use global error handler middleware
 app.all("*", (req, res, next) => {

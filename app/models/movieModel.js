@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const slugify = require("slugify");
+const CommentModel = require("../models/commentModel");
 
 const movieSchema = mongoose.Schema({
   movieName: {
@@ -76,6 +77,10 @@ const movieSchema = mongoose.Schema({
     type: [String],
     required: [true, "Please provide download link."],
   },
+  comments: [{
+    type: mongoose.Schema.ObjectId,
+    ref: CommentModel
+  }],
   addedAt: {
     type: Date,
     default: Date.now,

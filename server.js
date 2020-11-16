@@ -6,7 +6,7 @@ const AppError = require("./utils/appError");
 dotenv.config({ path: "./config.env" });
 
 // VARIABLE DECLARATIONS
-const DB = process.env.LOCAL_DATABASE;
+const DB = process.env.DATABASE;
 const port = process.env.PORT;
 
 
