@@ -26,57 +26,47 @@ const createSendToken = (id, res, user) => {
 }
 
 exports.signup = catchAsync(async (req, res, next) => {
-  const newUser = await User.create(req.body);
-  // const token = generateToken();
-
+  const userData = await User.findOne({ email : req.body.email });
+  if(userData != null){
+    return next(new AppError("User already exist.", 400));
+  }
+  let user = {
+    name : req.body.name,
+    email : req.body.email,
+    photo : req.body.photo,
+    password : req.body.password,
+    passwordConfirm : req.body.passwordConfirm,
+  }
+  const newUser = await User.create(user);
   createSendToken(newUser._id, res, newUser);
-  
 });
 
 exports.logIn = catchAsync(async (req, res, next) => {
-
   const { email, password } = req.body;
-
   if (!email || !password) {
     next(new AppError("Please Provide email or password", 400));
   }
-
   const user = await User.findOne({ email }).select("+password");
-
   if (!user || !(await user.comparePassword(password, user.password))) {
     return next(new AppError("Incorrect email or password", 400));
   }
-
   createSendToken(user._id, res, user);
 });
 
 exports.protectedRoutes = catchAsync(async (req, res, next) => {
-
   let token;
-
-  // const authToken = req.headers.authorization;
-  // if(authToken && authToken.startsWith('Bearer')){
-  //   bearertoken = authToken.split(' ')[1];
-  // } 
-
   if(req.cookies.jwt){
     token = req.cookies.jwt;
   }
-
   if(!token) {
     return next(new AppError("you are not logged in, please log in.", 400));
   }
-
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
-
   const loggedUser = await User.findById(decoded.id);
-
   if(!loggedUser){
     return next(new AppError("User not exist.", 400));
   }
-
   req.user = loggedUser;
-
   next();
 });
 
